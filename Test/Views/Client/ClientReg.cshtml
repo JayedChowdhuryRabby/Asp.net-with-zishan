@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "ClientReg";
+}
+@if (Model != null)
+{
+    @*<h2>@ViewBag.Login.Uname</h2>
+        <h3>@ViewBag.Login.Pass</h3>*@
+    <h2>@Model.Name</h2>
+    <h3>@Model.Id</h3>
+    <h3>@Model.Gender</h3>
+}
+
+<h2>ClientReg</h2>
+
+
+
+<form method="post">
+    Name: <input type="text" name="Name" placeholder="Name" class="form-control" />
+
+    Id: <input type="text" name="Id" placeholder="Id" class="form-control" />
+
+    Gender:<input type="radio" name="Gender" value="Male" /> Male<input type="radio" name="Gender" value="Female" /> Female
+    <br />Profession:<br />
+    <select class="form-control" name="Profession">
+        <option selected disabled>Select</option>
+        <option>Student</option>
+        <option>Teacher</option>
+    </select>
+    Hobbies:
+    <input type="checkbox" value="Games" name="Hobbies[]" /> Games
+    <input type="checkbox" value="Sports" name="Hobbies[]" /> Sports
+    <input type="checkbox" value="Travelling" name="Hobbies[]" /> Travelling
+    <input type="checkbox" value="Music" name="Hobbies[]" /> Music
+    <br />
+    Date of Birth: <input type="date" name="Dob" /> <br />
+    <input type="submit" value="Register" class="btn btn-success" />
+</form>
+
+
+
